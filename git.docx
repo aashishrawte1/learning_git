@@ -1,0 +1,121 @@
+## reference commit
+git show HEAD
+git log
+
+## ancestry
+HEAD^
+master^
+HEAD~1, HEAD~
+git show HEAD^
+
+Ancestry: grandparents
+HEAD^^
+HEAD~2
+git show HEAD^^
+
+ancestry: GREAT-grandparents
+HEAD^^^
+HEAD~3
+git show HEAD^^^
+
+## TREE LISTINGS
+git ls-tree <tree-ish>
+git ls-tree HEAD
+git ls-tree HEAD^
+git ls-tree HEAD^^
+git ls-tree HEAD^^^
+git ls-tree HEAD directories/
+
+## filter the commit log
+git log -3
+git log --since=2022-01-01
+git log --until=2022-01-01
+git log --until="3 days ago"
+git log --after=2.weeks --before=3.days
+git log --author="Aashish"
+git log --grep="Initial"
+git log b447401938..HEAD                  
+git log <SHA>..<SHA>  
+git log filename.html
+
+## format the commit log
+git log -p 
+git log --stat 
+git log --format=medium
+
+--format=
+medium
+oneline
+short
+full
+fuller
+email
+raw
+
+or
+
+git log --oneline
+git log --graph
+git log --graph --all --oneline --decorate      
+
+## create branches
+git branch
+git branch new_feature
+cat .git/HEAD
+ls -la .git/refs/heads/
+
+cat .git/refs/heads/master
+
+## switch branches
+git checkout new_feature
+cat .git/HEAD
+
+git commit -am 'modified item of some file'
+
+## create and switch branches
+git checkout -b hotfix/feature-notifications
+
+## switch branches with uncommitted changes
+
+## compare branches
+git diff master..new_feature
+git diff --color-words master..new_feature
+git branch --merged
+git branch --no-merged
+
+## rename branches
+git branch -m seo_title
+
+## delete branches
+git branch -d <branch name>
+git checkout -D <branch name>
+
+## configure command prompt
+__git_psl
+https://github.com/git/git
+|
+git-prompt.sh
+|
+download
+|
+git-prompt.bash
+|
+mv git-prompt.bash .git-prompt.bash
+|
+edit bash_profile.bash
+
+
+## reset types
+soft reset> git reset --soft <tree-ish>
+mixed reset> git reset --mixed <tree-ish>
+hard reset> git reset --hard <tree-ish>
+
+## soft reset
+git reset --soft <tree-ish>
+git commit --amend
+
+## merge branch
+git merge <branch name>
+git branch --merged
+
+
