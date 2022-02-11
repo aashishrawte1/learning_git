@@ -118,4 +118,23 @@ git commit --amend
 git merge <branch name>
 git branch --merged
 
+## save changes in the stash
+git stash save "message"
+git stash list 
+git stash show stash@{0}
+
+## retrieve stashed changes
+git stash list
+git stash show -p stash@{0}
+git stash pop
+git stash apply
+
+## clear the stash
+git stash drop stash@{0}
+git stash clear
+
+----------------------------------------------------------------
+
+## set up a remote
+
 
